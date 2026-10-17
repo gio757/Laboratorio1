@@ -67,6 +67,52 @@ router.post('/reset', async (req, res) => {
   }
 });
 
+// Consumer Metrics and Consumption Analytics
+router.get('/analytics', (req, res) => {
+  try {
+    const analytics = db.getConsumersAnalytics();
+    res.json({
+      success: true,
+      timestamp: new Date().toISOString(),
+      data: analytics
+    });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+router.get('/consumers', (req, res) => {
+  try {
+    const analytics = db.getConsumersAnalytics();
+    res.json({
+      success: true,
+      data: analytics.topConsumers,
+      tiers: analytics.consumptionTiers
+    });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+});
+
+// Simulate Order placement from PWA or E-commerce
+router.post('/orders', (req, res) => {
+  const { customer, items, total, paymentMethod } = req.body;
+  const newOrder = {
+    id: 'RAPID-' + Math.floor(100000 + Math.random() * 900000),
+    customer: customer || 'Cliente Rapid',
+    items: items || [],
+    total: parseFloat(total) || 0,
+    paymentMethod: paymentMethod || 'Tarjeta Online',
+    status: 'En preparación',
+    createdAt: new Date().toISOString()
+  };
+  res.status(201).json({
+    success: true,
+    message: 'Pedido recibido en cocina',
+    order: newOrder
+  });
+});
+
 // Helper for socket testing
 function checkTcpPort(host, port = 3306, timeout = 300) {
   return new Promise((resolve) => {

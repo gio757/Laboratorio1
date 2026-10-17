@@ -1,12 +1,25 @@
 :root {
-  --primary: #2563eb;
-  --primary-hover: #1d4ed8;
-  --bg: #090d16;
-  --surface: #131b2e;
-  --surface-border: #1e293b;
-  --text: #f8fafc;
-  --text-muted: #94a3b8;
-  --success: #10b981;
+  --primary: #d97706;
+  --primary-hover: #b45309;
+  --primary-light: #fef3c7;
+  --primary-dark: #92400e;
+  --bg-app: #fbfbfa;
+  --surface: #ffffff;
+  --surface-warm: #f7f5f0;
+  --surface-border: #ede8df;
+  --text-main: #1c1917;
+  --text-muted: #78716c;
+  --text-subtle: #a8a29e;
+  --success: #059669;
+  --success-light: #ecfdf5;
+  --accent: #ea580c;
+  --shadow-sm: 0 2px 6px rgba(28, 25, 23, 0.05);
+  --shadow-md: 0 8px 20px -4px rgba(28, 25, 23, 0.08);
+  --shadow-lg: 0 16px 36px -6px rgba(28, 25, 23, 0.12);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
 }
 
 * {
@@ -18,8 +31,8 @@
 
 body {
   font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: #030712;
-  color: var(--text);
+  background-color: #f3efe6;
+  color: var(--text-main);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -27,15 +40,15 @@ body {
 
 #root {
   width: 100%;
-  max-width: 480px;
+  max-width: 460px;
   min-height: 100vh;
-  background-color: var(--bg);
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+  background-color: var(--bg-app);
+  box-shadow: 0 10px 40px rgba(44, 30, 20, 0.12);
   display: flex;
   flex-direction: column;
   position: relative;
-  border-left: 1px solid rgba(255, 255, 255, 0.05);
-  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  border-left: 1px solid var(--surface-border);
+  border-right: 1px solid var(--surface-border);
 }
 
 @keyframes fadeIn {
@@ -44,5 +57,18 @@ body {
 }
 
 .fade-in {
-  animation: fadeIn 0.3s ease-out;
+  animation: fadeIn 0.25s ease-out;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #e7e2d7;
+  border-radius: 4px;
 }
