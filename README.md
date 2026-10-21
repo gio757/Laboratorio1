@@ -62,6 +62,24 @@ Las 4 capas corren en un **único contenedor Docker** exponiendo un **único pue
 
 
 
-__
+---
 
-AAAA
+## 🎨 Identidad Visual y Referencia de Diseño (Landing E-commerce)
+
+La interfaz del **Portal E-commerce** (`/`) fue actualizada adoptando el estilo visual, la paleta cromática de alto impacto y los elementos de diseño (botones, cintillos, insignias de precio y composición) inspirados directamente en la imagen de referencia:
+
+- 📸 **Ruta del afiche de referencia:** `assets-references\images\hamburguesería1.jpg`
+- 🎨 **Paleta de Colores:**
+  - **Rojo Intenso / Crimson Red (`#dc2626` / `#b91c1c`):** Botones de acción, cintillos superiores de combos (`COMBO 1-4`) y badges circulares de precios.
+  - **Amarillo Mostaza Eléctrico (`#fbbf24` / `#f59e0b`):** Títulos destacados ("FOOD"), cintas de encabezado ("COMBO OFFERS", "MEALS", "MORE FAST FOOD"), barras descriptivas inferiores y bordes punteados.
+  - **Fondo Dark Chalkboard / Carbón (`#0a0a0c` / `#141418`):** Fondo oscuro texturizado de pizarra americana para un contraste vibrante y apetitoso.
+  - **Acentos Verde y Naranja (`#16a34a` / `#ea580c`):** Distintivos de opciones vegetarianas y comidas especiales.
+- 🍔 **Componentes y Secciones Clave del Afiche:**
+  1. **Hero Principal "FAST FOOD":** Tipografía condensada de gran tamaño, eslogan script *"Tasty Food... Happy Mood!"*, badge *"Good Food Good Life"* y banner con megáfono para pedidos rápidos (`7659010324`).
+  2. **Combo Offers:** 4 combos con foto, badge de número de combo, precio circular e indicación de contenido sobre fondo amarillo.
+  3. **Meals:** Menús completos categorizados por color (*Veg Meals*, *Non-Veg Meals*, *Biryani Meals*, *South Indian Meals*).
+  4. **More Fast Food:** Parrilla de categorías rápidas (Pizza, Sandwich, Noodles, Fried Rice, Momos, Milkshake) con precio de partida.
+  5. **Catálogo de 10 Variantes Gourmet:** Clasificación por especialidad, filtros dinámicos y modal interactivo con ingredientes y valor nutricional.
+  6. **Banner de Entrega Rápida:** Cintillo rojo inferior *"Tasty Food Fast Delivery - At your doorstep"* con botón para llamada telefónica inmediata.
+  7. **Badges de Confianza:** Sellos de *Best Quality*, *Hygienic Food*, *Pocket Friendly* y *100% Satisfaction*.
+
